@@ -5,7 +5,10 @@ import SvgImage from './SvgImage';
 
 const MyImage = props => {
   const source = resolveAssetSource(props.source);
-  if (source && (source.uri && (source.uri.match('.png') || source.uri.match('.jpg')) )) {
+  if (
+    source &&
+    source.uri && (source.uri.match('.png') || source.uri.match('.jpg'))
+  ) {
     return <Image {...props} />;
   } else {
     const style = props.style || {};

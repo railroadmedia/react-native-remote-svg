@@ -72,18 +72,18 @@ class SvgImage extends Component {
       const html = getHTML(svgContent, flattenedStyle);
 
       return (
-        <View pointerEvents="none" style={[props.style, props.containerStyle]}>
+        <View pointerEvents='none' style={[props.style, props.containerStyle]}>
           <WebView
             originWhitelist={['*']}
             scalesPageToFit={true}
-            useWebKit={false}
+            useWebKit={true}
             style={[
               {
                 width: 200,
                 height: 100,
-                backgroundColor: 'transparent',
+                backgroundColor: 'transparent'
               },
-              props.style,
+              props.style
             ]}
             scrollEnabled={false}
             showsHorizontalScrollIndicator={false}
@@ -95,7 +95,7 @@ class SvgImage extends Component {
     } else {
       return (
         <View
-          pointerEvents="none"
+          pointerEvents='none'
           style={[props.containerStyle, props.style]}
         />
       );
