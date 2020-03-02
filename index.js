@@ -7,7 +7,8 @@ const MyImage = props => {
   const source = resolveAssetSource(props.source);
   if (
     source &&
-    source.uri && (source.uri.match('.png') || source.uri.match('.jpg'))
+    source.uri &&
+    (source.uri.match('.png') || source.uri.match('.jpg'))
   ) {
     return <Image {...props} />;
   } else {

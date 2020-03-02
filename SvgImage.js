@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
+import { SvgUri } from 'react-native-svg';
 
 const getHTML = (svgContent, style) => `
 <html data-key="key-${style.height}-${style.width}">
@@ -70,8 +71,13 @@ class SvgImage extends Component {
     if (svgContent) {
       const flattenedStyle = StyleSheet.flatten(props.style) || {};
       const html = getHTML(svgContent, flattenedStyle);
-
-      return (
+      return props.useSvgUri && SvgUri ? (
+        <SvgUri
+          uri={this.props.source.uri}
+          {...(props.style.width ? { width: props.style.width } : {})}
+          {...(props.style.height ? { height: props.style.height } : {})}
+        />
+      ) : (
         <View pointerEvents='none' style={[props.style, props.containerStyle]}>
           <WebView
             originWhitelist={['*']}
