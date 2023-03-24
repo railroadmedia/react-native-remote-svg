@@ -9,8 +9,9 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=15",
-    "react-native": ">=0.57 <0.59",
+    "react": "18.2.0",
+    "react-native-svg": "^12.1.1",
+    "react-native": "0.71.4",
     "react-native-webview": ">=5.2.4"
   },
   "keywords": [
