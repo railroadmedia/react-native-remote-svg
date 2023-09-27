@@ -10,7 +10,7 @@
   "license": "MIT",
   "peerDependencies": {
     "react": "18.2.0",
-    "react-native-svg": "^12.1.1",
+    "react-native-svg": "^13.13.0",
     "react-native": "0.71.4",
     "react-native-webview": ">=5.2.4"
   },
